@@ -26,6 +26,21 @@
 }
 
 
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -36,6 +51,14 @@
     left: 0;
     width: 100%;
     padding: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
   }
 }
 
