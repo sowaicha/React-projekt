@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
           backgroundColor: "#6fcf74",
           color: "white",
           border: "none",
-          padding: "10px 15px",
+          padding: "20px 20px",
           borderRadius: "10px",
           cursor: "pointer",
           fontWeight: "bold",
