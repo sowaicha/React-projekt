@@ -131,9 +131,9 @@ export default function Home() {
 
       <section
         style={{
-          margin: "0 auto",
+          margin:"0 auto",
           paddingTop: "40px",
-          maxWidth: "70%",
+          width: "60%",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
@@ -142,7 +142,7 @@ export default function Home() {
       >
         <img
           style={{
-            width: "800px",
+            width: "650px",
             height: "250px",
             objectFit: "cover",
             borderRadius: "10px",
@@ -151,7 +151,7 @@ export default function Home() {
           alt="une tres belle montre "
         />
         <div>
-          <h2 style={{ textAlign: "center" }}>
+          <h2 style={{ margin:"" }}>
             Notre nouvelle collection de montres
           </h2>
           <p

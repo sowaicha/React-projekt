@@ -1,7 +1,7 @@
 .navbar {
   background-color: #163f3cff;
   display: flex;
- 
+   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
  
@@ -68,7 +68,7 @@
   font-size: 18px;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 
@@ -90,22 +90,8 @@
   
 }
 
-.nav-button {
-  background-color: #6fcf74ff;
-  color: white;
-  border: none;
-  padding: 7px 20px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 9px;
-  transition: background-color 0.2s;
-}
 
-.nav-button:hover {
-  background-color: #57a95cff;
-}
+
 .cart-count {
   color: white;
   margin-left: 3px;
