@@ -7,6 +7,7 @@ import "./styles/Navbar.css";
 export default function Navbar() {
   const [cartCount, setCartCount] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,11 +18,11 @@ export default function Navbar() {
     return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
-  const handleSearch = () => {
-    localStorage.setItem("searchQuery", searchQuery);
-    navigate("/productList");
+  const handleSearch = (value) => {
+    setSearchQuery(value);
+    navigate(`/productList?search=${encodeURIComponent(value)}`);
   };
-
+  
   return (
     <nav className="navbar">
       <div className="nav-left">
