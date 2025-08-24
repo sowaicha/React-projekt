@@ -137,6 +137,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
+          flexWrap: "wrap",
           gap: " 30px",
         }}
       >
