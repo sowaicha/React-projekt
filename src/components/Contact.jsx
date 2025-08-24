@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     console.log("Données envoyées :", { name, email, message });
 
- 
+   
     alert("Votre message a été envoyé ✅");
     
     // Réinitialiser les champs
@@ -58,7 +58,7 @@ export default function Contact() {
           type="email"
           placeholder="Votre email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+         onChange={(e) => setEmail(e.target.value)}
           required
           style={{ padding: "12px", borderRadius: "8px", border: "1px solid #ccc" }}
         />
