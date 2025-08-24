@@ -14,6 +14,7 @@ const featuredProducts = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 644);
 
   // Slider automatique
   useEffect(() => {
@@ -21,6 +22,12 @@ export default function Home() {
       setCurrentSlide((prev) => (prev + 1) % featuredProducts.length);
     }, 2000);
     return () => clearInterval(interval);
+  }, []);
+  // Gestion de la responsivité
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 644);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -137,8 +144,8 @@ export default function Home() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          flexWrap: "wrap",
-          gap: " 30px",
+           flexWrap: isMobile ? "wrap" : "nowrap",
+          gap: " 35px",
         }}
       >
         <img
@@ -152,7 +159,7 @@ export default function Home() {
           alt="une tres belle montre "
         />
         <div>
-          <h2 style={{ margin:"" }}>
+          <h2 style={{ textAlign: "center" }}>
             Notre nouvelle collection de montres
           </h2>
           <p
